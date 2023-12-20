@@ -31,7 +31,7 @@
   ],
   "physicsStartAwake": true,
   "properties": [],
-  "solid": true,
+  "solid": false,
   "spriteId": {
     "name": "testWallSpr",
     "path": "sprites/testWallSpr/testWallSpr.yy",

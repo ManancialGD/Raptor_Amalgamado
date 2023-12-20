@@ -1,31 +1,39 @@
-key_up=ord("W")
-key_down=ord("S")
-key_right=ord("D")
-key_left=ord("A")
 velocity=5
-runAddSpeed=2
-
 
 if (keyboard_check(vk_shift)){
-velocity+=runAddSpeed
+	velocity+=runAddSpeed
 }
 
 
-if (keyboard_check(key_right)){
-	x+=velocity
-} if (keyboard_check(key_left)){
-	x-=velocity
-} if (keyboard_check(key_up)){
-	y-=velocity
-} if (keyboard_check(key_down)){
-	y+=velocity
+var target_speed_x = keyboard_check(key_right) - keyboard_check(key_left);
+var target_speed_y = keyboard_check(key_down) - keyboard_check(key_up);
+
+speed_x += (target_speed_x * velocity - speed_x) * fric;
+speed_y += (target_speed_y * velocity - speed_y) * fric;
+
+x += speed_x;
+y += speed_y;
+
+
+
+
+if (target_speed_x!=0 or target_speed_y!=0){
+	sprite_index=playerRunSpr
+} else{
+	sprite_index=playerSpr
+}
+
+if (target_speed_x == -1){
+	image_xscale = -scale;
+} else if (target_speed_x == 1){
+	image_xscale = scale;
 }
 
 
-if (keyboard_check_pressed(vk_backspace)){
-	if (panicMode){
-		panicMode=false
-	} else{
-		panicMode=true
-	}
+
+
+if (distance_to_object(enemyObj) <= panicTrigger){
+	panicMode=true
+} else{
+	panicMode=false
 }

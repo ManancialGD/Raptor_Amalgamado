@@ -4,7 +4,7 @@
 /// @param x
 /// @param y
 
-function BulbLight(_renderer, _sprite, _image, _x, _y, _scale) constructor
+function BulbLight(_renderer, _sprite, _image, _x, _y, _scale, _color) constructor
 {
     visible = true;
     
@@ -18,7 +18,7 @@ function BulbLight(_renderer, _sprite, _image, _x, _y, _scale) constructor
     xscale = _scale;
     yscale = _scale;
     angle  = 0.0;
-    blend  = c_white;
+    blend  = _color;
     alpha  = 1.0;
     
     penumbraSize = 0.0;
