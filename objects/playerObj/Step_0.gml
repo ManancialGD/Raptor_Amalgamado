@@ -1,4 +1,4 @@
-velocity=5
+velocity=velocityTotal
 
 if (keyboard_check(vk_shift)){
 	velocity+=runAddSpeed

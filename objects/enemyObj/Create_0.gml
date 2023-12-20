@@ -1,2 +1,5 @@
-image_xscale = 2
-image_yscale = 2
+scale=2
+
+speed=5
+image_xscale = scale
+image_yscale = scale

@@ -1,6 +1,3 @@
-standardScale=3
-
-
 influence=lightInfluence
 if (panicMode){
 	influence+=panicInfluence

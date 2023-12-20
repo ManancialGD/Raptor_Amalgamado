@@ -1,4 +1,6 @@
+velocityTotal=5
 lightInfluence=0.3
+standardScale=2.5
 panicMode=false
 panicInfluence=0.7
 panicTrigger=500
@@ -10,7 +12,6 @@ key_right=ord("D")
 key_left=ord("A")
 fric=0.15
 runAddSpeed=3
-lightColor=make_color_rgb(252,110,2)
 scale=2
 
 
